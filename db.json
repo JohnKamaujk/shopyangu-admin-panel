@@ -1,0 +1,149 @@
+{
+  "shops": [
+    {
+      "id": 1,
+      "name": "Tech Hub",
+      "description": "Latest gadgets and electronics.",
+      "logo": "https://via.placeholder.com/150",
+      "products": [1, 2, 3]
+    },
+    {
+      "id": 2,
+      "name": "Fashion Forward",
+      "description": "Trendy clothes for every season.",
+      "logo": "https://via.placeholder.com/150",
+      "products": [4, 5]
+    },
+    {
+      "id": 3,
+      "name": "Home Essentials",
+      "description": "Everything you need for your home.",
+      "logo": "https://via.placeholder.com/150",
+      "products": [6, 7, 8]
+    },
+    {
+      "id": 4,
+      "name": "Fitness World",
+      "description": "Gear up for your fitness journey.",
+      "logo": "https://via.placeholder.com/150",
+      "products": [9, 10]
+    },
+    {
+      "id": 5,
+      "name": "Book Nook",
+      "description": "Explore a world of stories and knowledge.",
+      "logo": "https://via.placeholder.com/150",
+      "products": [11, 12]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Smartphone X",
+      "price": 899.99,
+      "stock": 15,
+      "description": "High-end smartphone with a sleek design.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 1
+    },
+    {
+      "id": 2,
+      "name": "Wireless Earbuds",
+      "price": 149.99,
+      "stock": 30,
+      "description": "Compact earbuds with noise cancellation.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 1
+    },
+    {
+      "id": 3,
+      "name": "4K Monitor",
+      "price": 499.99,
+      "stock": 10,
+      "description": "Stunning visuals with 4K resolution.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 1
+    },
+    {
+      "id": 4,
+      "name": "Casual T-Shirt",
+      "price": 19.99,
+      "stock": 50,
+      "description": "Comfortable cotton t-shirt in various sizes.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 2
+    },
+    {
+      "id": 5,
+      "name": "Designer Jeans",
+      "price": 79.99,
+      "stock": 25,
+      "description": "Premium quality denim jeans.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 2
+    },
+    {
+      "id": 6,
+      "name": "Blender Pro",
+      "price": 129.99,
+      "stock": 20,
+      "description": "Multi-functional blender for your kitchen.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 3
+    },
+    {
+      "id": 7,
+      "name": "Ceramic Plates Set",
+      "price": 59.99,
+      "stock": 40,
+      "description": "Stylish ceramic plates for every occasion.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 3
+    },
+    {
+      "id": 8,
+      "name": "Vacuum Cleaner",
+      "price": 199.99,
+      "stock": 15,
+      "description": "Efficient cleaning for your home.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 3
+    },
+    {
+      "id": 9,
+      "name": "Yoga Mat",
+      "price": 29.99,
+      "stock": 60,
+      "description": "Durable and comfortable yoga mat.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 4
+    },
+    {
+      "id": 10,
+      "name": "Dumbbell Set",
+      "price": 99.99,
+      "stock": 10,
+      "description": "Adjustable dumbbell set for strength training.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 4
+    },
+    {
+      "id": 11,
+      "name": "Mystery Novel",
+      "price": 14.99,
+      "stock": 45,
+      "description": "A thrilling mystery novel to keep you hooked.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 5
+    },
+    {
+      "id": 12,
+      "name": "Science Textbook",
+      "price": 59.99,
+      "stock": 20,
+      "description": "Comprehensive science textbook for learners.",
+      "image": "https://via.placeholder.com/150",
+      "shopId": 5
+    }
+  ]
+}
