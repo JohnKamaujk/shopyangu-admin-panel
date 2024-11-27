@@ -73,3 +73,20 @@ export const updateProduct = async (updatedProduct: any) => {
 
   return await response.json();
 };
+
+export const deleteProduct = async (productId: number): Promise<void> => {
+  try {
+    const response = await fetch(
+      `http://localhost:3001/products/${productId}`,
+      {
+        method: "DELETE",
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to delete product");
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};

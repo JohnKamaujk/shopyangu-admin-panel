@@ -8,9 +8,10 @@ type ProductCardProps = {
     description: string;
   };
   onEdit: () => void;
+  onDelete: () => void;
 };
 
-const ProductCard = ({ product, onEdit }: ProductCardProps) => {
+const ProductCard = ({ product, onEdit, onDelete }: ProductCardProps) => {
   return (
     <div className="border dark:border-gray-500 rounded-lg p-4 hover:shadow-md">
       <h3 className="text-xl font-semibold dark:text-gray-200">
@@ -25,7 +26,10 @@ const ProductCard = ({ product, onEdit }: ProductCardProps) => {
         >
           Edit
         </button>
-        <button className="px-4 py-2 bg-red-500 text-white rounded-md">
+        <button
+          className="px-4 py-2 bg-red-500 text-white rounded-md"
+          onClick={onDelete}
+        >
           Delete
         </button>
       </div>

@@ -190,31 +190,13 @@
       "shopId": 5
     },
     {
-      "id": "f6c1",
-      "name": "kula",
-      "price": 2,
-      "stock": 3,
-      "description": "jska",
-      "image": "https:url/nii.com",
-      "shopId": 4
-    },
-    {
-      "id": "31f8",
-      "name": "jkjakaj",
-      "price": 4,
-      "stock": 6,
-      "description": "ahjdkajs",
-      "image": "https:url/hjhaj.com",
-      "shopId": 34
-    },
-    {
-      "id": "9f20",
-      "name": "keke",
-      "price": 3,
-      "stock": 3,
-      "description": "kaksksk",
-      "image": "https:url/susuia",
-      "shopId": 6
+      "id": "2eb1",
+      "name": "Blossoms of the Savannah",
+      "price": 1200,
+      "stock": 30,
+      "description": "Set book for high schools.",
+      "image": "https://url.com",
+      "shopId": 1
     }
   ]
 }

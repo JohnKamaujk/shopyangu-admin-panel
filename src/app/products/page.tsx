@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import ProductHeader from "./ProductHeader";
 import Pagination from "@/components/Pagination";
-import { getProducts } from "@/utils/api";
+import { deleteProduct, getProducts } from "@/utils/api";
 import ProductCard from "@/components/ProductCard";
 import ModalEditProduct from "./ModalEditProduct";
 
@@ -28,16 +28,21 @@ const Product = () => {
     fetchProducts();
   }, [currentPage, products]);
 
-
-
   const handleEditClick = (product: any) => {
     setSelectedProduct(product);
     setIsEditModalOpen(true);
   };
 
+  const handleDeleteProduct = async (productId: number) => {
+    await deleteProduct(productId);
+    setProducts((prevProducts) =>
+      prevProducts.filter((product) => product.id !== productId)
+    );
+  };
+
   return (
     <div>
-      <ProductHeader  />
+      <ProductHeader />
       <div className="px-4 xl:px-6 pt-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
@@ -45,6 +50,7 @@ const Product = () => {
               key={product.id}
               product={product}
               onEdit={() => handleEditClick(product)}
+              onDelete={() => handleDeleteProduct(product.id)}
             />
           ))}
         </div>
