@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import ModalNewProduct from "./ModalNewProduct";
 
 
+
 const ProductHeader = () => {
   const [isModalNewProductOpen, setIsModalNewProductOpen] = useState(false);
 
@@ -12,6 +13,7 @@ const ProductHeader = () => {
       <ModalNewProduct
         isOpen={isModalNewProductOpen}
         onClose={() => setIsModalNewProductOpen(false)}
+        
       />
       <div className="pb-6 pt-6 lg:pb-4 lg:pt-8">
         <Header

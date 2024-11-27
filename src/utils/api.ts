@@ -28,7 +28,7 @@ export const createProduct = async (
     shopId: number;
   },
   setIsLoading: (loading: boolean) => void
-): Promise<void> => {
+): Promise<any> => {
   setIsLoading(true);
 
   try {
@@ -43,8 +43,13 @@ export const createProduct = async (
     if (!response.ok) {
       throw new Error("Failed to create product");
     }
+
+    const createdProduct = await response.json();
+
+    return createdProduct;
   } catch (error) {
     console.error(error);
+    throw new Error("Failed to create product");
   } finally {
     setIsLoading(false);
   }

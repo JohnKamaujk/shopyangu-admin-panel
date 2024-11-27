@@ -33,7 +33,6 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
       setIsLoading
     );
 
-    // Reset form
     setName("");
     setPrice("");
     setStock("");

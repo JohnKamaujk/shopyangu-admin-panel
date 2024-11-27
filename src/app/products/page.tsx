@@ -26,7 +26,9 @@ const Product = () => {
     };
 
     fetchProducts();
-  }, [currentPage]);
+  }, [currentPage, products]);
+
+
 
   const handleEditClick = (product: any) => {
     setSelectedProduct(product);
@@ -35,7 +37,7 @@ const Product = () => {
 
   return (
     <div>
-      <ProductHeader />
+      <ProductHeader  />
       <div className="px-4 xl:px-6 pt-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (

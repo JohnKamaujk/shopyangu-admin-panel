@@ -56,7 +56,7 @@
   "products": [
     {
       "id": "1",
-      "name": "Smartphone X",
+      "name": "Smartphone Xy",
       "price": 899.99,
       "stock": 15,
       "description": "High-end smartphone with a sleek design.",
@@ -179,6 +179,42 @@
       "description": "Energy drink",
       "image": "https://via.placeholder.com/150",
       "shopId": 23
+    },
+    {
+      "id": "29a6",
+      "name": "kalamu",
+      "price": 3,
+      "stock": 4,
+      "description": "jkj",
+      "image": "https:url/jksjk.com",
+      "shopId": 5
+    },
+    {
+      "id": "f6c1",
+      "name": "kula",
+      "price": 2,
+      "stock": 3,
+      "description": "jska",
+      "image": "https:url/nii.com",
+      "shopId": 4
+    },
+    {
+      "id": "31f8",
+      "name": "jkjakaj",
+      "price": 4,
+      "stock": 6,
+      "description": "ahjdkajs",
+      "image": "https:url/hjhaj.com",
+      "shopId": 34
+    },
+    {
+      "id": "9f20",
+      "name": "keke",
+      "price": 3,
+      "stock": 3,
+      "description": "kaksksk",
+      "image": "https:url/susuia",
+      "shopId": 6
     }
   ]
 }
