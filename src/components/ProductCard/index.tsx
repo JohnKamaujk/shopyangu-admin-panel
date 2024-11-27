@@ -6,6 +6,7 @@ type ProductCardProps = {
     name: string;
     price: string;
     description: string;
+    image: string; // Add the image property
   };
   onEdit: () => void;
   onDelete: () => void;
@@ -14,6 +15,11 @@ type ProductCardProps = {
 const ProductCard = ({ product, onEdit, onDelete }: ProductCardProps) => {
   return (
     <div className="border dark:border-gray-500 rounded-lg p-4 hover:shadow-md">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-full h-48 object-cover rounded-md mb-4"
+      />
       <h3 className="text-xl font-semibold dark:text-gray-200">
         {product.name}
       </h3>
