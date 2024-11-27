@@ -1,7 +1,7 @@
 import Modal from "@/components/Modal";
 import { useCreateProjectMutation } from "@/state/api";
+import { createProduct } from "@/utils/api";
 import React, { useState } from "react";
-import { formatISO } from "date-fns";
 
 type Props = {
   isOpen: boolean;
@@ -9,39 +9,59 @@ type Props = {
 };
 
 const ModalNewProduct = ({ isOpen, onClose }: Props) => {
-  const [createProject, { isLoading }] = useCreateProjectMutation();
-  const [projectName, setProjectName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [stock, setStock] = useState("");
   const [description, setDescription] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
+  const [image, setImage] = useState("");
+  const [shopId, setShopId] = useState("");
 
   const handleSubmit = async () => {
-    if (!projectName || !startDate || !endDate) return;
+    if (!name || !price || !stock || !description || !image || !shopId) return;
 
-    const formattedStartDate = formatISO(new Date(startDate), {
-      representation: "complete",
-    });
-    const formattedEndDate = formatISO(new Date(endDate), {
-      representation: "complete",
-    });
+    await createProduct(
+      {
+        name,
+        price: parseFloat(price),
+        stock: parseInt(stock, 10),
+        description,
+        image,
+        shopId: parseInt(shopId, 10),
+      },
+      setIsLoading
+    );
 
-    await createProject({
-      name: projectName,
-      description,
-      startDate: formattedStartDate,
-      endDate: formattedEndDate,
-    });
+    // Reset form
+    setName("");
+    setPrice("");
+    setStock("");
+    setDescription("");
+    setImage("");
+    setShopId("");
+    onClose();
   };
 
   const isFormValid = () => {
-    return projectName && description && startDate && endDate;
+    return (
+      name &&
+      price &&
+      !isNaN(parseFloat(price)) &&
+      stock &&
+      !isNaN(parseInt(stock, 10)) &&
+      description &&
+      image &&
+      shopId &&
+      !isNaN(parseInt(shopId, 10))
+    );
   };
 
   const inputStyles =
     "w-full rounded border border-gray-300 p-2 shadow-sm dark:border-dark-tertiary dark:bg-dark-tertiary dark:text-white dark:focus:outline-none";
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} name="Create New Project">
+    <Modal isOpen={isOpen} onClose={onClose} name="Create New Product">
       <form
         className="mt-4 space-y-6"
         onSubmit={(e) => {
@@ -52,9 +72,23 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
         <input
           type="text"
           className={inputStyles}
-          placeholder="Project Name"
-          value={projectName}
-          onChange={(e) => setProjectName(e.target.value)}
+          placeholder="Product Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="number"
+          className={inputStyles}
+          placeholder="Price"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        />
+        <input
+          type="number"
+          className={inputStyles}
+          placeholder="Stock Quantity"
+          value={stock}
+          onChange={(e) => setStock(e.target.value)}
         />
         <textarea
           className={inputStyles}
@@ -62,20 +96,20 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-2">
-          <input
-            type="date"
-            className={inputStyles}
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
-          />
-          <input
-            type="date"
-            className={inputStyles}
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
-          />
-        </div>
+        <input
+          type="url"
+          className={inputStyles}
+          placeholder="Image URL"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+        />
+        <input
+          type="number"
+          className={inputStyles}
+          placeholder="Shop ID"
+          value={shopId}
+          onChange={(e) => setShopId(e.target.value)}
+        />
         <button
           type="submit"
           className={`focus-offset-2 mt-4 flex w-full justify-center rounded-md border border-transparent bg-blue-primary px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 ${
@@ -83,7 +117,7 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
           }`}
           disabled={!isFormValid() || isLoading}
         >
-          {isLoading ? "Creating..." : "Create Project"}
+          {isLoading ? "Creating..." : "Create Product"}
         </button>
       </form>
     </Modal>

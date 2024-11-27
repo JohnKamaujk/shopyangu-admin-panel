@@ -3,10 +3,10 @@ import React from "react";
 
 const Settings = () => {
   const userSettings = {
-    username: "johndoe",
-    email: "john.doe@example.com",
-    teamName: "Development Team",
-    roleName: "Developer",
+    username: "admin101",
+    email: "admin.101@example.com",
+    teamName: "Management Team",
+    roleName: "Admin",
   };
 
   const labelStyles = "block text-sm font-medium dark:text-white";

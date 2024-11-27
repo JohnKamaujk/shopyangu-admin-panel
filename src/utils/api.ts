@@ -17,3 +17,35 @@ export const getProducts = async (page: number = 1, limit: number = 6) => {
     totalPages,
   };
 };
+
+export const createProduct = async (
+  product: {
+    name: string;
+    price: number;
+    stock: number;
+    description: string;
+    image: string;
+    shopId: number;
+  },
+  setIsLoading: (loading: boolean) => void
+): Promise<void> => {
+  setIsLoading(true);
+
+  try {
+    const response = await fetch("http://localhost:3001/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to create product");
+    }
+  } catch (error) {
+    console.error(error);
+  } finally {
+    setIsLoading(false);
+  }
+};
