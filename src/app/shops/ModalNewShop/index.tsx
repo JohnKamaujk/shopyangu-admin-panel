@@ -1,5 +1,5 @@
 import Modal from "@/components/Modal";
-import { createProduct } from "@/utils/api/productApi";
+import { createShop } from "@/utils/api/shopApi";
 import React, { useState } from "react";
 
 type Props = {
@@ -11,47 +11,32 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [stock, setStock] = useState("");
   const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
-  const [shopId, setShopId] = useState("");
+  const [logo, setLogo] = useState("");
 
   const handleSubmit = async () => {
-    if (!name || !price || !stock || !description || !image || !shopId) return;
+    if (!name || !description || !logo) return;
 
-    await createProduct(
+    await createShop(
       {
         name,
-        price: parseFloat(price),
-        stock: parseInt(stock, 10),
         description,
-        image,
-        shopId: parseInt(shopId, 10),
+        logo,
       },
       setIsLoading
     );
 
     setName("");
-    setPrice("");
-    setStock("");
     setDescription("");
-    setImage("");
-    setShopId("");
+    setLogo("");
     onClose();
   };
 
   const isFormValid = () => {
     return (
       name &&
-      price &&
-      !isNaN(parseFloat(price)) &&
-      stock &&
-      !isNaN(parseInt(stock, 10)) &&
       description &&
-      image &&
-      shopId &&
-      !isNaN(parseInt(shopId, 10))
+      logo
     );
   };
 
@@ -70,23 +55,9 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
         <input
           type="text"
           className={inputStyles}
-          placeholder="Product Name"
+          placeholder="Shop Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="number"
-          className={inputStyles}
-          placeholder="Price"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
-        <input
-          type="number"
-          className={inputStyles}
-          placeholder="Stock Quantity"
-          value={stock}
-          onChange={(e) => setStock(e.target.value)}
         />
         <textarea
           className={inputStyles}
@@ -98,15 +69,8 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
           type="url"
           className={inputStyles}
           placeholder="Image URL"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
-        <input
-          type="number"
-          className={inputStyles}
-          placeholder="Shop ID"
-          value={shopId}
-          onChange={(e) => setShopId(e.target.value)}
+          value={logo}
+          onChange={(e) => setLogo(e.target.value)}
         />
         <button
           type="submit"

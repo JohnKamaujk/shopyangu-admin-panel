@@ -1,11 +1,11 @@
 import Modal from "@/components/Modal";
 import { useState, useEffect } from "react";
-import { updateProduct } from "@/utils/api";
+import { updateProduct } from "@/utils/api/productApi";
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
-  productToEdit?: any; 
+  productToEdit?: any;
 };
 
 const ModalEditProduct = ({ isOpen, onClose, productToEdit }: Props) => {
@@ -44,7 +44,7 @@ const ModalEditProduct = ({ isOpen, onClose, productToEdit }: Props) => {
     };
 
     try {
-      await updateProduct(updatedProduct); 
+      await updateProduct(updatedProduct);
       onClose();
     } catch (error) {
       console.error("Error updating product:", error);

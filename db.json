@@ -51,6 +51,12 @@
         11,
         12
       ]
+    },
+    {
+      "id": "7088",
+      "name": "Books galore",
+      "description": "books store in Nairobi",
+      "logo": "https://picsum.photos/300/200"
     }
   ],
   "products": [
