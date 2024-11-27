@@ -49,3 +49,22 @@ export const createProduct = async (
     setIsLoading(false);
   }
 };
+
+export const updateProduct = async (updatedProduct: any) => {
+  const response = await fetch(
+    `http://localhost:3001/products/${updatedProduct.id}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedProduct),
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to update product");
+  }
+
+  return await response.json();
+};

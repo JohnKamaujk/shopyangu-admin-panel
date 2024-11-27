@@ -173,10 +173,10 @@
     },
     {
       "id": "f2ba",
-      "name": "Lucozade",
-      "price": 22,
+      "name": "Lucozade Drink",
+      "price": 23,
       "stock": 150,
-      "description": "energy drink",
+      "description": "Energy drink",
       "image": "https://via.placeholder.com/150",
       "shopId": 23
     }

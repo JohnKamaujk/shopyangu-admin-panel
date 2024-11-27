@@ -5,11 +5,14 @@ import ProductHeader from "./ProductHeader";
 import Pagination from "@/components/Pagination";
 import { getProducts } from "@/utils/api";
 import ProductCard from "@/components/ProductCard";
+import ModalEditProduct from "./ModalEditProduct";
 
 const Product = () => {
   const [products, setProducts] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [selectedProduct, setSelectedProduct] = useState<any | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -25,19 +28,33 @@ const Product = () => {
     fetchProducts();
   }, [currentPage]);
 
+  const handleEditClick = (product: any) => {
+    setSelectedProduct(product);
+    setIsEditModalOpen(true);
+  };
+
   return (
     <div>
       <ProductHeader />
       <div className="px-4 xl:px-6 pt-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              onEdit={() => handleEditClick(product)}
+            />
           ))}
         </div>
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
           onPageChange={(page: number) => setCurrentPage(page)}
+        />
+        <ModalEditProduct
+          isOpen={isEditModalOpen}
+          onClose={() => setIsEditModalOpen(false)}
+          productToEdit={selectedProduct}
         />
       </div>
     </div>
