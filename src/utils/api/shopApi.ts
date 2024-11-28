@@ -1,21 +1,55 @@
 const BASE_URL = "http://localhost:3001";
 
 export const getShops = async (page: number = 1, limit: number = 6) => {
-  const response = await fetch(`${BASE_URL}/shops`);
+  try {
+    const response = await fetch(`${BASE_URL}/shops`);
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch shops");
+    if (!response.ok) {
+      throw new Error("Failed to fetch shops");
+    }
+
+    const allShops = await response.json();
+    const paginatedShops = allShops.slice((page - 1) * limit, page * limit);
+
+    const totalPages = Math.ceil(allShops.length / limit);
+
+    return {
+      data: paginatedShops,
+      totalPages,
+    };
+  } catch (error) {
+    console.error(error);
+    throw error;
   }
+};
 
-  const allShops = await response.json();
-  const paginatedShops = allShops.slice((page - 1) * limit, page * limit);
+export const getShopById = async (id: string) => {
+  try {
+    const response = await fetch(`${BASE_URL}/shops/${id}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch shop details");
+    }
+    const shop = await response.json();
+    return await shop;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
 
-  const totalPages = Math.ceil(allShops.length / limit);
+export const getShopProducts= async (shopId: string) => {
+  try {
+    const response = await fetch(`${BASE_URL}/products?shopId=${shopId}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch products");
+    }
 
-  return {
-    data: paginatedShops,
-    totalPages,
-  };
+    const products = await response.json();
+    return products;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 };
 
 export const createShop = async (
@@ -46,7 +80,7 @@ export const createShop = async (
     return createdShop;
   } catch (error) {
     console.error(error);
-    throw new Error("Failed to create Shop");
+    throw error;
   } finally {
     setIsLoading(false);
   }
@@ -79,5 +113,6 @@ export const deleteShop = async (shopId: number): Promise<void> => {
     }
   } catch (error) {
     console.error(error);
+    throw error;
   }
 };

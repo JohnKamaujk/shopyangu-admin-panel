@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ModalNewProduct from "../ModalNewProduct";
+import Link from "next/link";
 
 type ShopCardProps = {
   shop: {
@@ -30,8 +31,26 @@ const ShopCard = ({ shop, onEdit, onDelete }: ShopCardProps) => {
         alt={shop.name}
         className="w-full h-48 object-cover rounded-md mb-4"
       />
-      <h3 className="text-xl font-semibold dark:text-gray-200">{shop.name}</h3>
-      <p className="text-gray-600 dark:text-gray-200">{shop.description}</p>
+
+      {/* Shop Name and View Button */}
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-xl font-semibold dark:text-gray-200">
+          {shop.name}
+        </h3>
+        <Link
+          href={`/shops/${shop.id}`}
+          className="text-blue-600 hover:underline dark:text-blue-400"
+        >
+          View Shop
+        </Link>
+      </div>
+
+      {/* Shop Description */}
+      <p className="text-gray-600 dark:text-gray-200 mb-4">
+        {shop.description}
+      </p>
+
+      {/* Action Buttons */}
       <div className="flex justify-between mt-4">
         <button
           className="px-4 py-2 bg-green-500 text-white rounded-md"
