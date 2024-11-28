@@ -44,7 +44,7 @@
     },
     {
       "id": "5",
-      "name": "Book Nook",
+      "name": "Book Nooks",
       "description": "Explore a world of stories and knowledge.",
       "logo": "https://via.placeholder.com/150",
       "products": [
@@ -54,7 +54,7 @@
     },
     {
       "id": "7088",
-      "name": "Books galore",
+      "name": "Books galor",
       "description": "books store in Nairobi",
       "logo": "https://picsum.photos/300/200"
     }
@@ -203,6 +203,15 @@
       "description": "Set book for high schools.",
       "image": "https://url.com",
       "shopId": 1
+    },
+    {
+      "id": "929b",
+      "name": "Samsung",
+      "price": 123456,
+      "stock": 12,
+      "description": "samsung phone",
+      "image": "https:url.com",
+      "shopId": "1"
     }
   ]
 }

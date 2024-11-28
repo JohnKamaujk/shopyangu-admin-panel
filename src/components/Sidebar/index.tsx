@@ -2,7 +2,6 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
-import { useGetProjectsQuery } from "@/state/api";
 import {
   AlertCircle,
   AlertOctagon,
@@ -21,6 +20,8 @@ import {
   Users,
   Store,
   X,
+  ChartNoAxesCombined,
+  ShoppingCart,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -72,9 +73,9 @@ const Sidebar = () => {
         </div>
         {/* NAVBAR LINKS */}
         <nav className="z-10 w-full">
-          <SidebarLink icon={Home} label="Home" href="/" />
+          <SidebarLink icon={ChartNoAxesCombined} label="Analytics" href="/" />
           <SidebarLink icon={Store} label="Shops" href="/shops" />
-          <SidebarLink icon={Store} label="Products" href="/products" />
+          <SidebarLink icon={ShoppingCart} label="Products" href="/products" />
           <SidebarLink icon={Users} label="Users" href="/users" />
           <SidebarLink icon={Settings} label="Settings" href="/settings" />
         </nav>

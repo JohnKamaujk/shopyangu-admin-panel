@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ShopHeader from "./ShopHeader";
+import ShopHeader from "../../components/ShopHeader";
 import Pagination from "@/components/Pagination";
 import { deleteShop, getShops } from "@/utils/api/shopApi";
 import ShopCard from "@/components/ShopCard";
-import ModalEditShop from "./ModalEditShop";
+import ModalEditShop from "../../components/ModalEditShop";
 
 const Shop = () => {
   const [shops, setShops] = useState<any[]>([]);

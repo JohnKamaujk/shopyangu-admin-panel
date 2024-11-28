@@ -25,7 +25,7 @@ export const createProduct = async (
     stock: number;
     description: string;
     image: string;
-    shopId: number;
+    shopId: string;
   },
   setIsLoading: (loading: boolean) => void
 ): Promise<any> => {

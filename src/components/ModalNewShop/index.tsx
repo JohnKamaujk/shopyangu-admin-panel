@@ -44,7 +44,7 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
     "w-full rounded border border-gray-300 p-2 shadow-sm dark:border-dark-tertiary dark:bg-dark-tertiary dark:text-white dark:focus:outline-none";
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} name="Create New Product">
+    <Modal isOpen={isOpen} onClose={onClose} name="Create New Shop">
       <form
         className="mt-4 space-y-6"
         onSubmit={(e) => {

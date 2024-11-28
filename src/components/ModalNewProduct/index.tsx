@@ -5,9 +5,10 @@ import React, { useState } from "react";
 type Props = {
   isOpen: boolean;
   onClose: () => void;
+  prefilledShopId?: string;
 };
 
-const ModalNewProduct = ({ isOpen, onClose }: Props) => {
+const ModalNewProduct = ({ isOpen, onClose, prefilledShopId }: Props) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const [name, setName] = useState("");
@@ -15,7 +16,7 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
   const [stock, setStock] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
-  const [shopId, setShopId] = useState("");
+  const shopId = prefilledShopId || "";
 
   const handleSubmit = async () => {
     if (!name || !price || !stock || !description || !image || !shopId) return;
@@ -27,7 +28,7 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
         stock: parseInt(stock, 10),
         description,
         image,
-        shopId: parseInt(shopId, 10),
+        shopId,
       },
       setIsLoading
     );
@@ -37,7 +38,6 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
     setStock("");
     setDescription("");
     setImage("");
-    setShopId("");
     onClose();
   };
 
@@ -50,8 +50,7 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
       !isNaN(parseInt(stock, 10)) &&
       description &&
       image &&
-      shopId &&
-      !isNaN(parseInt(shopId, 10))
+      shopId
     );
   };
 
@@ -102,11 +101,11 @@ const ModalNewProduct = ({ isOpen, onClose }: Props) => {
           onChange={(e) => setImage(e.target.value)}
         />
         <input
-          type="number"
-          className={inputStyles}
+          type="string"
+          className={`${inputStyles} cursor-not-allowed bg-gray-200`}
           placeholder="Shop ID"
           value={shopId}
-          onChange={(e) => setShopId(e.target.value)}
+          disabled
         />
         <button
           type="submit"

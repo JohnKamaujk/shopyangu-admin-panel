@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import ModalNewProduct from "../ModalNewProduct";
 
 type ShopCardProps = {
   shop: {
-    id: number;
+    id: string;
     name: string;
     description: string;
     logo: string;
@@ -12,6 +13,16 @@ type ShopCardProps = {
 };
 
 const ShopCard = ({ shop, onEdit, onDelete }: ShopCardProps) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleAddProduct = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="border dark:border-gray-500 rounded-lg p-4 hover:shadow-md">
       <img
@@ -34,7 +45,22 @@ const ShopCard = ({ shop, onEdit, onDelete }: ShopCardProps) => {
         >
           Delete
         </button>
+        <button
+          className="px-4 py-2 bg-blue-500 text-white rounded-md"
+          onClick={handleAddProduct}
+        >
+          Add Products
+        </button>
       </div>
+
+      {/* Modal for Adding Products */}
+      {isModalOpen && (
+        <ModalNewProduct
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          prefilledShopId={shop.id}
+        />
+      )}
     </div>
   );
 };

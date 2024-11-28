@@ -1,9 +1,7 @@
 import Header from "@/components/Header";
 import { PlusSquare } from "lucide-react";
 import React, { useState } from "react";
-import ModalNewShop from "./ModalNewShop";
-
-
+import ModalNewShop from "../ModalNewShop";
 
 const ShopHeader = () => {
   const [isModalNewShopOpen, setIsModalNewShopOpen] = useState(false);
@@ -13,11 +11,10 @@ const ShopHeader = () => {
       <ModalNewShop
         isOpen={isModalNewShopOpen}
         onClose={() => setIsModalNewShopOpen(false)}
-        
       />
-      <div className="pb-6 pt-6 lg:pb-4 lg:pt-8">
+      <div className="pb-3 pt-3 lg:pb-4 lg:pt-4">
         <Header
-          name="Shops Management page"
+          name="Manage Shops"
           buttonComponent={
             <button
               className="flex items-center rounded-md bg-blue-primary px-3 py-2 text-white hover:bg-blue-600"
