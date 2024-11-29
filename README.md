@@ -61,5 +61,5 @@ Before starting, make sure you have the following installed:
 [Typescript-url]: https://www.typescriptlang.org/
 [Tailwind.com]: https://img.shields.io/badge/Tailwind-563D7C?style=for-the-badge&logo=tailwind&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
-[Tailwind.com]: https://img.shields.io/badge/Redux-563D7C?style=for-the-badge&logo=redux&logoColor=white
-[Tailwind-url]: https://redux.com/
+[Redux.com]: https://img.shields.io/badge/Redux-563D7C?style=for-the-badge&logo=redux&logoColor=white
+[Redux-url]: https://redux.com/
