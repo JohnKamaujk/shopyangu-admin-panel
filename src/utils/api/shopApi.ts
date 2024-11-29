@@ -37,7 +37,7 @@ export const getShopById = async (id: string) => {
   }
 };
 
-export const getShopProducts= async (shopId: string) => {
+export const getShopProducts = async (shopId: string) => {
   try {
     const response = await fetch(`${BASE_URL}/products?shopId=${shopId}`);
     if (!response.ok) {
@@ -98,8 +98,9 @@ export const updateShop = async (updatedShop: any) => {
   if (!response.ok) {
     throw new Error("Failed to update shop");
   }
-
-  return await response.json();
+  const shop = await response.json();
+  
+  return shop;
 };
 
 export const deleteShop = async (shopId: string): Promise<void> => {

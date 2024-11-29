@@ -26,7 +26,7 @@ const Shop = () => {
     };
 
     fetchShops();
-  }, [currentPage, shops]);
+  }, [currentPage]);
 
   const handleEditClick = (product: any) => {
     setSelectedShop(product);
@@ -53,6 +53,12 @@ const Shop = () => {
     }
   };
 
+  const handleShopUpdate = (updatedShop: any) => {
+    setShops((prevShops) =>
+      prevShops.map((shop) => (shop.id === updatedShop.id ? updatedShop : shop))
+    );
+  };
+
   return (
     <div>
       <ShopHeader />
@@ -76,6 +82,7 @@ const Shop = () => {
           isOpen={isEditModalOpen}
           onClose={() => setIsEditModalOpen(false)}
           shopToEdit={selectedShop}
+          onShopUpdate={handleShopUpdate}
         />
       </div>
     </div>

@@ -2,8 +2,8 @@
   "shops": [
     {
       "id": "1",
-      "name": "Tech Hub",
-      "description": "Latest gadgets and electronics.",
+      "name": "Tech Huber",
+      "description": "Latest trendy gadgets and electronics.",
       "logo": "https://via.placeholder.com/150",
       "products": [
         1,

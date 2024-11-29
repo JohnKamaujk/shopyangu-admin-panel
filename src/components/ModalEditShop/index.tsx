@@ -6,9 +6,15 @@ type Props = {
   isOpen: boolean;
   onClose: () => void;
   shopToEdit?: any;
+  onShopUpdate: (updatedShop: any) => void;
 };
 
-const ModalEditShop = ({ isOpen, onClose, shopToEdit }: Props) => {
+const ModalEditShop = ({
+  isOpen,
+  onClose,
+  shopToEdit,
+  onShopUpdate,
+}: Props) => {
   const [shopName, setShopName] = useState("");
   const [description, setDescription] = useState("");
   const [logo, setLogo] = useState("");
@@ -35,7 +41,8 @@ const ModalEditShop = ({ isOpen, onClose, shopToEdit }: Props) => {
     };
 
     try {
-      await updateShop(updatedShop);
+      const shop = await updateShop(updatedShop);
+      onShopUpdate(shop);
       onClose();
     } catch (error) {
       console.error("Error updating Shop:", error);
