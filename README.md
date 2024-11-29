@@ -19,7 +19,7 @@ Frameworks and tools used to develop ShopYangu:
 * [![Next.js][Next.js]][Next-url]
 * [![Typescript][Typescript.dev]][Typescript-url]
 * [![Tailwind CSS][Tailwind]][Tailwind-url]
-* [![JSON Server][JSON-Server.com]][JSON-Server-url]
+* [![JSON Server][JSON-Server]][JSON-Server-url]
 * [![Redux][Redux]][Redux-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -63,5 +63,5 @@ Before starting, make sure you have the following installed:
 [Tailwind-url]: https://tailwindcss.com/
 [Redux]: https://img.shields.io/badge/Redux-34EBE8?style=for-the-badge&logo=redux&logoColor=white
 [Redux-url]: https://redux.com/
-[JSON-Server]: https://img.shields.io/badge/JSON-Server-34EBE8?style=for-the-badge&logo=JSON-Server&logoColor=white
-[Redux-url]: https://JSON-Server.com/
+[JSON-Server]: https://img.shields.io/badge/Json-34EBE8?style=for-the-badge&logo=Json&logoColor=white
+[JSON-Server-url]: https://Json.com/
