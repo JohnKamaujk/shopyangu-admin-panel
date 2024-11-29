@@ -26,7 +26,7 @@ const Product = () => {
     };
 
     fetchProducts();
-  }, [currentPage, products]);
+  }, [currentPage]);
 
   const handleEditClick = (product: any) => {
     setSelectedProduct(product);

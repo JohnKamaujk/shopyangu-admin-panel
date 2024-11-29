@@ -62,10 +62,10 @@
   "products": [
     {
       "id": "1",
-      "name": "Smartphone Xy",
+      "name": "Smartphone X",
       "price": 899.99,
       "stock": 15,
-      "description": "High-end smartphone with a sleek design.",
+      "description": "High-end smartphone with a ,sleek design.",
       "image": "https://via.placeholder.com/150",
       "shopId": "1c31"
     },
@@ -116,7 +116,7 @@
     },
     {
       "id": "7",
-      "name": "Ceramic Plates Set",
+      "name": "Ceramic Plates Sets",
       "price": 59.99,
       "stock": 40,
       "description": "Stylish ceramic plates for every occasion.",
@@ -156,15 +156,6 @@
       "price": 14.99,
       "stock": 45,
       "description": "A thrilling mystery novel to keep you hooked.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 5
-    },
-    {
-      "id": "12",
-      "name": "Science Textboo",
-      "price": 59.99,
-      "stock": 20,
-      "description": "Comprehensive science textbook for learners.",
       "image": "https://via.placeholder.com/150",
       "shopId": 5
     },
