@@ -63,5 +63,5 @@ Before starting, make sure you have the following installed:
 [Tailwind-url]: https://tailwindcss.com/
 [Redux]: https://img.shields.io/badge/Redux-34EBE8?style=for-the-badge&logo=redux&logoColor=white
 [Redux-url]: https://redux.com/
-[JSON-Server]: https://img.shields.io/badge/Json-34EBE8?style=for-the-badge&logo=Json&logoColor=white
+[JSON-Server]: https://img.shields.io/badge/Json-CF0A14?style=for-the-badge&logo=Json&logoColor=white
 [JSON-Server-url]: https://Json.com/
