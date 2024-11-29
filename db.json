@@ -196,15 +196,6 @@
       "shopId": 5
     },
     {
-      "id": "2eb1",
-      "name": "Blossoms of the Savannah",
-      "price": 1200,
-      "stock": 30,
-      "description": "Set book for high schools.",
-      "image": "https://url.com",
-      "shopId": 1
-    },
-    {
       "id": "929b",
       "name": "Samsung",
       "price": 123456,

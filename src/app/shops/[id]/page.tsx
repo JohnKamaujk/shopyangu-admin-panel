@@ -3,6 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { getShopById, getShopProducts } from "@/utils/api/shopApi";
 import Link from "next/link";
+import ProductCard from "@/components/ProductCard";
+import ModalEditProduct from "@/components/ModalEditProduct";
+import { deleteProduct } from "@/utils/api/productApi";
 
 type Props = {
   params: { id: string };
@@ -15,6 +18,9 @@ const ShopDetails = ({ params }: Props) => {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const [selectedProduct, setSelectedProduct] = useState<any | null>(null);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +37,19 @@ const ShopDetails = ({ params }: Props) => {
     };
 
     fetchData();
-  }, [id]);
+  }, [id, products]);
+
+  const handleEditClick = (product: any) => {
+    setSelectedProduct(product);
+    setIsEditModalOpen(true);
+  };
+
+  const handleDeleteProduct = async (productId: number) => {
+    await deleteProduct(productId);
+    setProducts((prevProducts) =>
+      prevProducts.filter((product) => product.id !== productId)
+    );
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -59,27 +77,22 @@ const ShopDetails = ({ params }: Props) => {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-4">
         {products.length > 0 ? (
           products.map((product) => (
-            <div key={product.id} className="p-4 border rounded">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-48 object-cover rounded mb-2"
-              />
-              <h3 className="text-lg font-semibold dark:text-gray-200">
-                {product.name}
-              </h3>
-              <p className="text-gray-500 dark:text-gray-200">
-                {product.description}
-              </p>
-              <p className="mt-1 text-blue-600 font-bold dark:text-gray-200">
-                ${product.price}
-              </p>
-            </div>
+            <ProductCard
+              key={product.id}
+              product={product}
+              onEdit={() => handleEditClick(product)}
+              onDelete={() => handleDeleteProduct(product.id)}
+            />
           ))
         ) : (
           <p>No products available for this shop.</p>
         )}
       </div>
+      <ModalEditProduct
+        isOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+        productToEdit={selectedProduct}
+      />
     </div>
   );
 };
