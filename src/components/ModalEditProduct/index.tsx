@@ -6,9 +6,15 @@ type Props = {
   isOpen: boolean;
   onClose: () => void;
   productToEdit?: any;
+  onProductUpdate: (updatedProduct: any) => void;
 };
 
-const ModalEditProduct = ({ isOpen, onClose, productToEdit }: Props) => {
+const ModalEditProduct = ({
+  isOpen,
+  onClose,
+  productToEdit,
+  onProductUpdate,
+}: Props) => {
   const [productName, setProductName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
@@ -44,7 +50,8 @@ const ModalEditProduct = ({ isOpen, onClose, productToEdit }: Props) => {
     };
 
     try {
-      await updateProduct(updatedProduct);
+      const product = await updateProduct(updatedProduct);
+      onProductUpdate(product);
       onClose();
     } catch (error) {
       console.error("Error updating product:", error);

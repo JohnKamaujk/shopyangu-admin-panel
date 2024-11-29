@@ -53,9 +53,9 @@
       ]
     },
     {
-      "id": "7088",
-      "name": "Books galore",
-      "description": "books store in Nairobi",
+      "id": "1c33",
+      "name": "Beauty beast",
+      "description": "beauty beast store",
       "logo": "https://picsum.photos/300/200"
     }
   ],
@@ -67,7 +67,7 @@
       "stock": 15,
       "description": "High-end smartphone with a sleek design.",
       "image": "https://via.placeholder.com/150",
-      "shopId": 1
+      "shopId": "1c31"
     },
     {
       "id": "2",
@@ -76,7 +76,7 @@
       "stock": 30,
       "description": "Compact earbuds with noise cancellation.",
       "image": "https://via.placeholder.com/150",
-      "shopId": 1
+      "shopId": "6c41"
     },
     {
       "id": "3",
@@ -85,7 +85,7 @@
       "stock": 10,
       "description": "Stunning visuals with 4K resolution.",
       "image": "https://via.placeholder.com/150",
-      "shopId": 1
+      "shopId": "1c63"
     },
     {
       "id": "4",
@@ -161,7 +161,7 @@
     },
     {
       "id": "12",
-      "name": "Science Textbook",
+      "name": "Science Textboo",
       "price": 59.99,
       "stock": 20,
       "description": "Comprehensive science textbook for learners.",
@@ -175,7 +175,7 @@
       "stock": 12,
       "description": "wembe nacette",
       "image": "https://via.placeholder.com/150",
-      "shopId": 1
+      "shopId": "4c31"
     },
     {
       "id": "f2ba",
@@ -197,12 +197,21 @@
     },
     {
       "id": "929b",
-      "name": "Samsung",
-      "price": 123456,
+      "name": "Sams",
+      "price": 12345,
       "stock": 12,
-      "description": "samsung phone",
+      "description": "samsung ph",
       "image": "https:url.com",
       "shopId": "1"
+    },
+    {
+      "id": "a606",
+      "name": "lipglue",
+      "price": 23,
+      "stock": 12,
+      "description": "lipgloss natural scented almonds",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "1c33"
     }
   ]
 }

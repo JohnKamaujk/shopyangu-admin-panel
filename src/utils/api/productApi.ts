@@ -71,7 +71,9 @@ export const updateProduct = async (updatedProduct: any) => {
     throw new Error("Failed to update product");
   }
 
-  return await response.json();
+  const product = await response.json();
+
+  return product;
 };
 
 export const deleteProduct = async (productId: number): Promise<void> => {

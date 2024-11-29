@@ -18,7 +18,6 @@ const ShopDetails = ({ params }: Props) => {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   const [selectedProduct, setSelectedProduct] = useState<any | null>(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
@@ -37,7 +36,7 @@ const ShopDetails = ({ params }: Props) => {
     };
 
     fetchData();
-  }, [id, products]);
+  }, [id]);
 
   const handleEditClick = (product: any) => {
     setSelectedProduct(product);
@@ -48,6 +47,14 @@ const ShopDetails = ({ params }: Props) => {
     await deleteProduct(productId);
     setProducts((prevProducts) =>
       prevProducts.filter((product) => product.id !== productId)
+    );
+  };
+
+  const handleProductUpdate = (updatedProduct: any) => {
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === updatedProduct.id ? updatedProduct : product
+      )
     );
   };
 
@@ -92,6 +99,7 @@ const ShopDetails = ({ params }: Props) => {
         isOpen={isEditModalOpen}
         onClose={() => setIsEditModalOpen(false)}
         productToEdit={selectedProduct}
+        onProductUpdate={handleProductUpdate}
       />
     </div>
   );

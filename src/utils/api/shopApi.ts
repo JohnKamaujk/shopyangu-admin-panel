@@ -102,7 +102,7 @@ export const updateShop = async (updatedShop: any) => {
   return await response.json();
 };
 
-export const deleteShop = async (shopId: number): Promise<void> => {
+export const deleteShop = async (shopId: string): Promise<void> => {
   try {
     const response = await fetch(`${BASE_URL}/shops/${shopId}`, {
       method: "DELETE",

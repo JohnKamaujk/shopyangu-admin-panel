@@ -40,6 +40,14 @@ const Product = () => {
     );
   };
 
+  const handleProductUpdate = (updatedProduct: any) => {
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === updatedProduct.id ? updatedProduct : product
+      )
+    );
+  };
+
   return (
     <div>
       <ProductHeader />
@@ -63,6 +71,7 @@ const Product = () => {
           isOpen={isEditModalOpen}
           onClose={() => setIsEditModalOpen(false)}
           productToEdit={selectedProduct}
+          onProductUpdate={handleProductUpdate}
         />
       </div>
     </div>

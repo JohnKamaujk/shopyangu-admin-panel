@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import ShopHeader from "../../components/ShopHeader";
 import Pagination from "@/components/Pagination";
-import { deleteShop, getShops } from "@/utils/api/shopApi";
+import { deleteShop, getShopProducts, getShops } from "@/utils/api/shopApi";
 import ShopCard from "@/components/ShopCard";
 import ModalEditShop from "../../components/ModalEditShop";
 
@@ -33,9 +33,24 @@ const Shop = () => {
     setIsEditModalOpen(true);
   };
 
-  const handleDeleteShop = async (shopId: number) => {
-    await deleteShop(shopId);
-    setShops((prevShops) => prevShops.filter((shop) => shop.id !== shopId));
+  const handleDeleteShop = async (shopId: string) => {
+    try {
+      const shopProducts = await getShopProducts(shopId);
+      if (shopProducts.length > 0) {
+        alert(
+          "This shop cannot be deleted because there are products associated with it."
+        );
+        return;
+      }
+      const confirmed = confirm("Are you sure you want to delete this shop?");
+      if (confirmed) {
+        await deleteShop(shopId);
+        setShops((prevShops) => prevShops.filter((shop) => shop.id !== shopId));
+      }
+    } catch (error) {
+      console.error("Failed to delete shop", error);
+      alert("An error occurred while trying to delete the shop.");
+    }
   };
 
   return (
