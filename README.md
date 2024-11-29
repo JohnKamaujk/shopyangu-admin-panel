@@ -18,9 +18,9 @@ Frameworks and tools used to develop ShopYangu:
 
 * [![Next.js][Next.js]][Next-url]
 * [![Typescript][Typescript.dev]][Typescript-url]
-* [![Tailwind CSS][Tailwind.com]][Tailwind-url]
+* [![Tailwind CSS][Tailwind]][Tailwind-url]
 * [![JSON Server][JSON-Server.com]][JSON-Server-url]
-* [![Redux][Redux.com]][Redux-url]
+* [![Redux][Redux]][Redux-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -59,7 +59,9 @@ Before starting, make sure you have the following installed:
 [Next-url]: https://nextjs.org/
 [Typescript.dev]: https://img.shields.io/badge/Typescript-DD0031?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://www.typescriptlang.org/
-[Tailwind.com]: https://img.shields.io/badge/Tailwind-563D7C?style=for-the-badge&logo=tailwind&logoColor=white
+[Tailwind]: https://img.shields.io/badge/Tailwind-563D7C?style=for-the-badge&logo=tailwind&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
-[Redux.com]: https://img.shields.io/badge/Redux-563D7C?style=for-the-badge&logo=redux&logoColor=white
+[Redux]: https://img.shields.io/badge/Redux-34EBE8?style=for-the-badge&logo=redux&logoColor=white
 [Redux-url]: https://redux.com/
+[JSON-Server]: https://img.shields.io/badge/JSON-Server-34EBE8?style=for-the-badge&logo=JSON-Server&logoColor=white
+[Redux-url]: https://JSON-Server.com/
