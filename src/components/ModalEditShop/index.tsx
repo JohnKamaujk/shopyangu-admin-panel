@@ -1,5 +1,5 @@
 import Modal from "@/components/Modal";
-import { updateShop } from "@/utils/api/shopApi";
+import { updateShop } from "@/app/api/shopApi";
 import { useState, useEffect } from "react";
 
 type Props = {

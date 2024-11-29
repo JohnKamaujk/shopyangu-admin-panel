@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { getShopById, getShopProducts } from "@/utils/api/shopApi";
+import { getShopById, getShopProducts } from "@/app/api/shopApi";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import ModalEditProduct from "@/components/ModalEditProduct";
-import { deleteProduct } from "@/utils/api/productApi";
+import { deleteProduct } from "@/app/api/productApi";
 
 type Props = {
   params: { id: string };

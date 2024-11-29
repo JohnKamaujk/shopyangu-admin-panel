@@ -1,6 +1,6 @@
 import Modal from "@/components/Modal";
 import { useState, useEffect } from "react";
-import { updateProduct } from "@/utils/api/productApi";
+import { updateProduct } from "@/app/api/productApi";
 
 type Props = {
   isOpen: boolean;

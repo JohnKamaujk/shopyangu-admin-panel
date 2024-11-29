@@ -1,5 +1,5 @@
 import Modal from "@/components/Modal";
-import { createProduct } from "@/utils/api/productApi";
+import { createProduct } from "@/app/api/productApi";
 import React, { useState } from "react";
 
 type Props = {

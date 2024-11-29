@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import ProductHeader from "../../components/ProductHeader";
 import Pagination from "@/components/Pagination";
-import { deleteProduct, getProducts } from "@/utils/api/productApi";
+import { deleteProduct, getProducts } from "@/app/api/productApi";
 import ProductCard from "@/components/ProductCard";
 import ModalEditProduct from "../../components/ModalEditProduct";
 

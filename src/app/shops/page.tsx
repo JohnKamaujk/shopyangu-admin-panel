@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import ShopHeader from "../../components/ShopHeader";
 import Pagination from "@/components/Pagination";
-import { deleteShop, getShopProducts, getShops } from "@/utils/api/shopApi";
+import { deleteShop, getShopProducts, getShops } from "@/app/api/shopApi";
 import ShopCard from "@/components/ShopCard";
 import ModalEditShop from "../../components/ModalEditShop";
 
