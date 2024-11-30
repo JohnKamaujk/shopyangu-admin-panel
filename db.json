@@ -1,208 +1,210 @@
 {
   "shops": [
     {
-      "id": "1",
-      "name": "Tech Huber",
-      "description": "Latest trendy gadgets and electronics.",
-      "logo": "https://via.placeholder.com/150",
-      "products": [
-        1,
-        2,
-        3
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Fashion Forward",
-      "description": "Trendy clothes for every season.",
-      "logo": "https://via.placeholder.com/150",
-      "products": [
-        4,
-        5
-      ]
-    },
-    {
-      "id": "3",
-      "name": "Home Essentials",
-      "description": "Everything you need for your home.",
-      "logo": "https://via.placeholder.com/150",
-      "products": [
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "id": "4",
-      "name": "Fitness World",
-      "description": "Gear up for your fitness journey.",
-      "logo": "https://via.placeholder.com/150",
-      "products": [
-        9,
-        10
-      ]
-    },
-    {
-      "id": "5",
-      "name": "Book Nooks",
-      "description": "Explore a world of stories and knowledge.",
-      "logo": "https://via.placeholder.com/150",
-      "products": [
-        11,
-        12
-      ]
-    },
-    {
       "id": "1c33",
-      "name": "Beauty beast",
-      "description": "beauty beast store",
+      "name": "Beauty Parlor",
+      "description": "Beauty Parlor Store",
+      "logo": "https://picsum.photos/300/200"
+    },
+    {
+      "id": "2a67",
+      "name": "Tech Haven",
+      "description": "Your ultimate tech store",
+      "logo": "https://picsum.photos/300/200"
+    },
+    {
+      "id": "3d45",
+      "name": "Fashion Flair",
+      "description": "Trendy fashion wear and accessories",
+      "logo": "https://picsum.photos/300/200"
+    },
+    {
+      "id": "4b12",
+      "name": "Gadget Galaxy",
+      "description": "Latest gadgets and electronics",
+      "logo": "https://picsum.photos/300/200"
+    },
+    {
+      "id": "5f90",
+      "name": "Home Style",
+      "description": "Elegant home decor and essentials",
+      "logo": "https://picsum.photos/300/200"
+    },
+    {
+      "id": "6e87",
+      "name": "Sports Spot",
+      "description": "Your one-stop shop for sports gear",
+      "logo": "https://picsum.photos/300/200"
+    },
+    {
+      "id": "7g64",
+      "name": "Book Barn",
+      "description": "A paradise for book lovers",
       "logo": "https://picsum.photos/300/200"
     }
   ],
   "products": [
     {
-      "id": "1",
-      "name": "Smartphone X",
-      "price": 899.99,
-      "stock": 15,
-      "description": "High-end smartphone with a ,sleek design.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": "1c31"
-    },
-    {
-      "id": "2",
-      "name": "Wireless Earbud",
-      "price": 149.99,
-      "stock": 30,
-      "description": "Compact earbuds with noise cancellation.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": "6c41"
-    },
-    {
-      "id": "3",
-      "name": "4K Monitor",
-      "price": 499.99,
-      "stock": 10,
-      "description": "Stunning visuals with 4K resolution.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": "1c63"
-    },
-    {
-      "id": "4",
-      "name": "Casual T-Shirt",
-      "price": 19.99,
-      "stock": 50,
-      "description": "Comfortable cotton t-shirt in various sizes.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 2
-    },
-    {
-      "id": "5",
-      "name": "Designer Jeans",
-      "price": 79.99,
-      "stock": 25,
-      "description": "Premium quality denim jeans.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 2
-    },
-    {
-      "id": "6",
-      "name": "Blender Pro",
-      "price": 129.99,
-      "stock": 20,
-      "description": "Multi-functional blender for your kitchen.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 3
-    },
-    {
-      "id": "7",
-      "name": "Ceramic Plates Sets",
-      "price": 59.99,
-      "stock": 40,
-      "description": "Stylish ceramic plates for every occasion.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 3
-    },
-    {
-      "id": "8",
-      "name": "Vacuum Cleaner",
-      "price": 199.99,
-      "stock": 15,
-      "description": "Efficient cleaning for your home.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 3
-    },
-    {
-      "id": "9",
-      "name": "Yoga Mat",
-      "price": 29.99,
-      "stock": 60,
-      "description": "Durable and comfortable yoga mat.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 4
-    },
-    {
-      "id": "10",
-      "name": "Dumbbell Set",
-      "price": 99.99,
-      "stock": 10,
-      "description": "Adjustable dumbbell set for strength training.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 4
-    },
-    {
-      "id": "11",
-      "name": "Mystery Novel",
-      "price": 14.99,
-      "stock": 45,
-      "description": "A thrilling mystery novel to keep you hooked.",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 5
-    },
-    {
-      "id": "6dc4",
-      "name": "Wembe",
-      "price": 5.45,
-      "stock": 12,
-      "description": "wembe nacette",
-      "image": "https://via.placeholder.com/150",
-      "shopId": "4c31"
-    },
-    {
-      "id": "f2ba",
-      "name": "Lucozade Drink",
-      "price": 23,
-      "stock": 150,
-      "description": "Energy drink",
-      "image": "https://via.placeholder.com/150",
-      "shopId": 23
-    },
-    {
-      "id": "29a6",
-      "name": "kalamu",
-      "price": 3,
-      "stock": 4,
-      "description": "jkj",
-      "image": "https://picsum.photos/300/200",
-      "shopId": 5
-    },
-    {
-      "id": "929b",
-      "name": "Sams",
-      "price": 12345,
-      "stock": 12,
-      "description": "samsung ph",
-      "image": "https:url.com",
-      "shopId": "1"
-    },
-    {
       "id": "a606",
-      "name": "lipglue",
+      "name": "Lipgloss",
       "price": 23,
       "stock": 12,
-      "description": "lipgloss natural scented almonds",
+      "description": "Lipgloss natural scented almonds",
       "image": "https://picsum.photos/300/200",
       "shopId": "1c33"
+    },
+    {
+      "id": "b78a",
+      "name": "Foundation Stick",
+      "price": 45,
+      "stock": 8,
+      "description": "All-day coverage foundation stick",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "1c33"
+    },
+    {
+      "id": "c901",
+      "name": "Leather jacket",
+      "price": 15,
+      "stock": 20,
+      "description": "Waterproof eyeliner pen",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "3d45"
+    },
+    {
+      "id": "d124",
+      "name": "Smartphone",
+      "price": 699,
+      "stock": 10,
+      "description": "Latest model with 128GB storage",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "2a67"
+    },
+    {
+      "id": "e678",
+      "name": "Wireless Headphones",
+      "price": 120,
+      "stock": 15,
+      "description": "Noise-cancelling over-ear headphones",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "2a67"
+    },
+    {
+      "id": "f345",
+      "name": "Laptop Sleeve",
+      "price": 25,
+      "stock": 30,
+      "description": "Durable laptop sleeve for 15-inch models",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "2a67"
+    },
+    {
+      "id": "g987",
+      "name": "Designer Jacket",
+      "price": 99,
+      "stock": 5,
+      "description": "Stylish winter jacket",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "3d45"
+    },
+    {
+      "id": "h123",
+      "name": "Leather Boots",
+      "price": 120,
+      "stock": 7,
+      "description": "High-quality leather boots",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "3d45"
+    },
+    {
+      "id": "i789",
+      "name": "Silk Scarf",
+      "price": 40,
+      "stock": 18,
+      "description": "Elegant silk scarf",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "3d45"
+    },
+    {
+      "id": "j456",
+      "name": "Smartwatch",
+      "price": 199,
+      "stock": 12,
+      "description": "Feature-packed smartwatch",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "4b12"
+    },
+    {
+      "id": "k789",
+      "name": "Gaming Mouse",
+      "price": 50,
+      "stock": 25,
+      "description": "High precision gaming mouse",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "4b12"
+    },
+    {
+      "id": "l012",
+      "name": "Bluetooth Speaker",
+      "price": 75,
+      "stock": 9,
+      "description": "Portable Bluetooth speaker",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "4b12"
+    },
+    {
+      "id": "m654",
+      "name": "Cushion Set",
+      "price": 60,
+      "stock": 6,
+      "description": "Soft and durable cushion set",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "5f90"
+    },
+    {
+      "id": "n123",
+      "name": "Wall Art",
+      "price": 150,
+      "stock": 4,
+      "description": "Hand-painted wall art",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "5f90"
+    },
+    {
+      "id": "o456",
+      "name": "Table Lamp",
+      "price": 45,
+      "stock": 10,
+      "description": "Modern design table lamp",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "5f90"
+    },
+    {
+      "id": "p789",
+      "name": "Football",
+      "price": 25,
+      "stock": 20,
+      "description": "High-quality football",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "6e87"
+    },
+    {
+      "id": "q012",
+      "name": "Tennis Racket",
+      "price": 75,
+      "stock": 15,
+      "description": "Lightweight tennis racket",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "6e87"
+    },
+    {
+      "id": "r345",
+      "name": "Yoga Mat",
+      "price": 20,
+      "stock": 18,
+      "description": "Non-slip yoga mat",
+      "image": "https://picsum.photos/300/200",
+      "shopId": "6e87"
     }
   ]
 }
