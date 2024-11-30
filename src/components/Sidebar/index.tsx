@@ -76,7 +76,7 @@ const Sidebar = () => {
           <SidebarLink icon={ChartNoAxesCombined} label="Analytics" href="/" />
           <SidebarLink icon={Store} label="Shops" href="/shops" />
           <SidebarLink icon={ShoppingCart} label="Products" href="/products" />
-          <SidebarLink icon={Users} label="Users" href="/users" />
+          <SidebarLink icon={Users} label="Users" href="/" />
           <SidebarLink icon={Settings} label="Settings" href="/settings" />
         </nav>
       </div>
