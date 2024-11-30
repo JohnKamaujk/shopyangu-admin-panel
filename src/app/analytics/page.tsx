@@ -65,7 +65,7 @@ const AnalyticsPage = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Bar Chart: Products per Shop */}
-        <div className="bg-white p-4 shadow-md rounded">
+        <div className="bg-white dark:bg-black dark:text-gray-200 p-4 shadow-md rounded">
           <h2 className="text-xl font-semibold mb-4 ">Products per Shop</h2>
           <BarChart width={400} height={300} data={shopsWithProducts}>
             <XAxis dataKey="name" />
@@ -76,7 +76,7 @@ const AnalyticsPage = () => {
         </div>
 
         {/* Pie Chart: Products per Shop */}
-        <div className="bg-white p-4 shadow-md rounded">
+        <div className="bg-white dark:bg-black dark:text-gray-200 p-4 shadow-md rounded">
           <h2 className="text-xl font-semibold mb-4">Products Distribution</h2>
           <PieChart width={400} height={300}>
             <Pie
